@@ -26,7 +26,7 @@ var getStatusCode = function (url, callback) {
   request(url, function(err, response) {
     if (err) {
       console.log('error', err);
-      callback(err);
+      callback(err, null); //null or no null?
     } else {
       callback(null, response.statusCode);
     }
